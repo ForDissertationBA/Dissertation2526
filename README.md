@@ -69,6 +69,31 @@ Before running a notebook, update the paths in its dataset/configuration section
 
 The loaders support the formats implemented in the notebooks, including JSONL, CSV and Parquet where applicable.
 
+
+## Integrated result workbooks
+
+The repository also includes a folder containing the integrated Excel outputs produced from the five experiment notebooks. These files are provided so that the reported tables and metrics can be inspected without rerunning the full modelling pipeline.
+
+The workbooks correspond to the notebooks as follows:
+
+- `Fixed_Temporal_Split_integrated_raw_data.xlsx`  
+  Output from `Integrated_Experiment_Runner_SP100_fixed_temporal_split.ipynb`.
+
+- `Nasdaq_rolling2yr_integrated_raw_data.xlsx`  
+  Output from `Integrated_Experiment_Runner_NASDAQ.ipynb`.
+
+- `SP100MainExperiment_rolling2yr_expanding_...xlsx`  
+  Output from `Integrated_Experiment_Runner_SP100_main_experiment.ipynb`.
+
+- `SP100_trainingwindow_rolling1yr3yr_...xlsx`  
+  Output from `Integrated_Experiment_Runner_rolling_1_2_3yr_time_sensitivity.ipynb`.
+
+- `SignedLog_CurrentPnL_integrated_raw_data.xlsx`  
+  Output from `Integrated_Experiment_Runner_SP100_signedlog_PnL.ipynb`.
+
+
+These workbooks contain the integrated experiment results used to construct the dissertation tables and comparisons. They should be treated as **experiment outputs**, not as the raw/model-ready input datasets described in the Data and configuration section above.
+
 ## Final model specifications
 
 The shared modelling utilities retain several additional candidate models for compatibility with earlier experiments. The final reported experiments are restricted through `EXPERIMENT_CONFIG`.
