@@ -7,20 +7,21 @@ This repository contains the notebooks used for the empirical analysis of machin
 - `EDA_for_SP100.ipynb`  
   Exploratory and data-quality analysis for the final feature set. Feature diagnostics are based on the training data; validation/test target distributions are used only for post-hoc descriptive stability checks.
 
-- `Integrated_Experiment_Runner_SP100_fixed_temporal_split.ipynb`  
-  Fixed chronological train/validation/test evaluation for the current-PnL target. 
-
 - `Integrated_Experiment_Runner_SP100_main_experiment.ipynb`  
-  Main S&P 100-derived experiment. Uses yearly walk-forward evaluation with expanding and rolling two-year training windows and the frozen feature specification (268 features).
+  Main S&P 100-derived experiment. Includes rolling two-year and expanding-window experiments across four targets: RL current PnL, RL long-action quality, RL long action, and perfect-hindsight positive long entry. Additional target variables retained in the notebook are from earlier experiments and are not used in the final reported analysis.
+
+- `Integrated_Experiment_Runner_SP100_fixed_temporal_split.ipynb`  
+  Fixed chronological train/validation/test evaluation for the current-PnL target. This notebook is used as a diagnostic fixed-split comparison rather than the main walk-forward evaluation.
 
 - `Integrated_Experiment_Runner_SP100_signedlog_PnL.ipynb`  
   Robustness check using a signed-log-transformed current-PnL target with a rolling two-year training window.
 
-- `Integrated_Experiment_Runner_SP100_window_sensitivity.ipynb`  
-  Training-window sensitivity analysis using rolling one-, two-, and three-year windows. Like-for-like comparisons use the common complete-year overlap (2023-2025).
+- `Integrated_Experiment_Runner_rolling_1_2_3yr_time_sensitivity.ipynb`  
+  Training-window sensitivity analysis using rolling one-, two-, and three-year windows. All schemes use the same frozen feature specification and model set (268 features); only the training-window length varies. Like-for-like comparisons use the common complete-year overlap (2023-2025).
 
-- `Integrated_Experiment_Runner_NASDAQ_updated.ipynb`  
-  Generalisability check on the Nasdaq 100-derived universe using the frozen feature specification (268 features).
+- `Integrated_Experiment_Runner_NASDAQ.ipynb`  
+  Generalisability check on the Nasdaq 100-derived universe using the frozen feature specification (268 features) and the current-PnL target.
+
 
 ## Environment setup
 
